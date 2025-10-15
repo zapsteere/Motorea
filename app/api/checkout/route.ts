@@ -21,7 +21,7 @@ export async function POST(req: Request) {
   // Use the Stripe API version your dashboard showed (either is fine)
   const stripe = new Stripe(secret, { apiVersion: "2024-06-20" });
   // If you prefer the new one you saw, you can use:
-  // const stripe = new Stripe(secret, { apiVersion: "2025-08-27.basil" });
+  const stripe = new Stripe(secret, { apiVersion: "2024-06-20" as any });
 
   const session = await stripe.checkout.sessions.create({
     mode: "payment",

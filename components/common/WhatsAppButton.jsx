@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
   // ✅ Use full international format, no + or spaces
   const number = "447722471841"; // <-- your number
   // Optional: prefill a message
-  const text = encodeURIComponent("Hi, I'm interested in a vehicle on Motorea.");
+  const text = encodeURIComponent("Hi, I'm interested in a vehicle on your website");
 
   return (
     <a

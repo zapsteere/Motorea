@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import MobileMenu from "@/components/common/headers/MobileMenu";
 import BackToTop from "@/components/common/BackToTop";
 import { usePathname } from "next/navigation"; // Import usePathname
-
+import WhatsAppButton from "@/components/common/WhatsAppButton";  
 export default function RootLayout({ children }) {
   const pathname = usePathname(); // Get pathname directly
 
@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
         <MobileMenu />
         <div className="boxcar-wrapper">{children}</div>
         <BackToTop />
+        <WhatsAppButton />
       </body>
     </html>
   );

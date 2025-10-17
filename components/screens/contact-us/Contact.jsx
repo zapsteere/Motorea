@@ -119,7 +119,7 @@ export default function Contact() {
                           type="text"
                           required
                           name="firstName"
-                          placeholder="Doston"
+                          placeholder="James"
                           value={formData.firstName}
                           onChange={handleChange}
                         />
@@ -132,7 +132,7 @@ export default function Contact() {
                           required
                           type="text"
                           name="lastName"
-                          placeholder="Adilov"
+                          placeholder="Corden"
                           value={formData.lastName}
                           onChange={handleChange}
                         />
@@ -198,8 +198,7 @@ export default function Contact() {
                   <div className="boxcar-title">
                     <h6 className="title">Contact details</h6>
                     <div className="text">
-                      Etiam pharetra egestas interdum blandit viverra morbi
-                      consequat mi non bibendum egestas quam egestas nulla.
+                      For appointments, test drives or business enquiries, contact Motorea — we’ll reply quickly.
                     </div>
                   </div>
                   <div className="content-box">

@@ -9,7 +9,7 @@ import {
   vehicleTypes,
 } from "@/data/footerLinks";
 import Link from "next/link";
-export default function Footer1({
+export default function Footer({
   parentClass = "boxcar-footer footer-style-one cus-st-1",
 }) {
   const [formData, setFormData] = useState({

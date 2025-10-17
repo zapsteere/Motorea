@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Header1 from "@/components/common/headers/Header1";
-import Footer1 from "@/components/common/footers/footer1";
+import Footer1 from "@/components/common/footers/Footer1";
 import ReserveButton from "@/components/common/ReserveButton";
 
 export const metadata = {

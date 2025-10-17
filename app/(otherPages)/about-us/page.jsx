@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Header1 from "@/components/common/headers/Header1";
-import Footer1 from "@/components/common/footers/Footer1";
+import Footer from "@/components/common/footers/Footer";
 import ReserveButton from "@/components/common/ReserveButton";
 
 export const metadata = {
@@ -86,7 +86,7 @@ export default function AboutUsPage() {
           </div>
         </section>
       </main>
-      <Footer1 parentClass="boxcar-footer footer-style-one v1 cus-st-1" />
+      <Footer parentClass="boxcar-footer footer-style-one v1 cus-st-1" />
     </>
   );
 }

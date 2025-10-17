@@ -1,7 +1,20 @@
 "use client";
 import React, { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
+
+// ---- Editable contact settings ----
+const CONTACT_CONFIG = {
+  // Real Motorea contact details
+  address: "Motorea — 4 Canal Way, London, UK",
+  email: "sulaiman@motorea.co",
+  phone: "+44 7722 471841",
+  // Google Maps EMBED URL (constructed for 4 Canal Way, London)
+  mapEmbedUrl:
+    "https://maps.google.com/maps?width=100%25&height=600&hl=en&q=4%20Canal%20Way%2C%20London%2C%20UK%20(Motorea)&t=&z=15&ie=UTF8&iwloc=B&output=embed",
+};
+// -----------------------------------
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,7 +32,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const to = "sulaiman@motorea.co";
+    const to = CONTACT_CONFIG.email;
     const subject = encodeURIComponent("New message from the site");
     const body = encodeURIComponent(
       `Full name: ${formData.firstName} ${formData.lastName}\n` +
@@ -72,7 +85,13 @@ export default function Contact() {
         {/* map-sec */}
         <div className="map-sec">
           <div className="goole-iframe">
-            <iframe src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe>
+            <iframe
+              src={CONTACT_CONFIG.mapEmbedUrl}
+              style={{ border: 0, width: "100%", height: "450px" }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
         {/* End map-section */}
@@ -139,7 +158,7 @@ export default function Contact() {
                           required
                           type="tel"
                           name="phone"
-                          placeholder="+90 47458 27 3287 12"
+                          placeholder={CONTACT_CONFIG.phone}
                           value={formData.phone}
                           onChange={handleChange}
                         />
@@ -209,7 +228,7 @@ export default function Contact() {
                       </span>
                       Address
                     </h6>
-                    <div className="text">Motorea Ltd – West London</div>
+                    <div className="text">{CONTACT_CONFIG.address}</div>
                   </div>
                   <div className="content-box">
                     <h6 className="title">
@@ -237,7 +256,7 @@ export default function Contact() {
                       </span>
                       Email
                     </h6>
-                    <div className="text">sulaiman@motorea.co</div>
+                    <div className="text">{CONTACT_CONFIG.email}</div>
                   </div>
                   <div className="content-box">
                     <h6 className="title">
@@ -267,7 +286,7 @@ export default function Contact() {
                       </span>
                       Phone
                     </h6>
-                    <div className="text">+44 077 224 718 41</div>
+                    <div className="text">{CONTACT_CONFIG.phone}</div>
                   </div>
                   <div className="social-icons">
                     <h6 className="title">Follow us</h6>

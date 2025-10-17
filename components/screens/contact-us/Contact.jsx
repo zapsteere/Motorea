@@ -10,9 +10,9 @@ const CONTACT_CONFIG = {
   address: "Motorea — 4 Canal Way, London, UK",
   email: "sulaiman@motorea.co",
   phone: "+44 7722 471841",
-  // Google Maps EMBED URL (constructed for 4 Canal Way, London)
+  // Google Maps EMBED URL for 4 Canal Way, London (safe generic embed)
   mapEmbedUrl:
-    "https://maps.google.com/maps?width=100%25&height=600&hl=en&q=4%20Canal%20Way%2C%20London%2C%20UK%20(Motorea)&t=&z=15&ie=UTF8&iwloc=B&output=embed",
+    "https://www.google.com/maps?q=4%20Canal%20Way%2C%20London%2C%20UK&z=15&output=embed",
 };
 // -----------------------------------
 

@@ -1,87 +1,92 @@
 import React from "react";
+import Link from "next/link";
 import Header1 from "@/components/common/headers/Header1";
 import Footer1 from "@/components/common/footers/Footer";
+import ReserveButton from "@/components/common/ReserveButton";
 
 export const metadata = {
-  title: "Motorea Long‑Distance Car Delivery",
+  title: "About Motorea — Quality Used Cars, Delivered UK-wide",
   description:
-    "Experience seamless long-distance car delivery with Motorea. From transparent pricing to legal protections, discover how we ensure your vehicle travels safely and efficiently across distances.",
+    "Motorea is a UK used-car dealer focused on clear pricing, verified quality, and nationwide delivery. HD walkarounds, condition reports, and a 14-day distance-selling right.",
 };
 
-export default function LongDistanceCarDeliveryPage() {
+export default function AboutUsPage() {
   return (
     <>
-      <Header1 headerClass="boxcar-header header-style-v1 style-two inner-header cus-style-1" />
-      <main>
-        <section className="hero-section" style={{ padding: "4rem 1rem", backgroundColor: "#f5f7fa", textAlign: "center" }}>
-          <h1>Motorea Long‑Distance Car Delivery</h1>
-          <p style={{ maxWidth: "600px", margin: "1rem auto", fontSize: "1.2rem", color: "#555" }}>
-            Experience seamless long-distance car delivery with Motorea. We ensure your vehicle travels safely and efficiently across any distance.
+      <Header1 />
+      <main className="layout-radius">
+        {/* Hero */}
+        <section className="boxcar-container pt-16 pb-10">
+          <h1 className="mb-3">About Motorea</h1>
+          <p className="text-lg">
+            We source, prepare, and deliver quality used cars across the UK. No faff. No hidden fees.
+            Cars match the description — or they don’t leave our site.
           </p>
         </section>
 
-        <section className="what-we-offer" style={{ padding: "3rem 1rem", maxWidth: "900px", margin: "0 auto" }}>
-          <h2>What We Offer</h2>
-          <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem", color: "#333" }}>
-            <li>Transparent pricing with no hidden fees.</li>
-            <li>Professional handling and secure transportation.</li>
-            <li>Real-time tracking and status updates.</li>
-            <li>Flexible scheduling to suit your needs.</li>
+        {/* What we stand for */}
+        <section className="boxcar-container py-10">
+          <h2 className="mb-4">What We Stand For</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Clarity:</strong> Full condition report, HD walkaround, verified history.</li>
+            <li><strong>Standards:</strong> Clean prep, roadworthy checks, no mystery faults.</li>
+            <li><strong>Delivery:</strong> Nationwide, trackable, doorstep handover.</li>
+            <li><strong>Protection:</strong> Distance-selling rights + Consumer Rights Act compliant.</li>
           </ul>
         </section>
 
-        <section className="legal-rights-protection" style={{ backgroundColor: "#eef2f7", padding: "3rem 1rem", maxWidth: "900px", margin: "0 auto" }}>
-          <h2>Legal Rights & Protection</h2>
-          <p style={{ color: "#444", lineHeight: "1.6" }}>
-            At Motorea, your vehicle’s safety and your legal rights are our priority. We comply with all regulatory requirements and provide comprehensive insurance coverage during transit. Our contracts clearly outline your protections, ensuring peace of mind throughout the delivery process.
-          </p>
-        </section>
-
-        <section className="how-it-works" style={{ padding: "3rem 1rem", maxWidth: "900px", margin: "0 auto" }}>
-          <h2>How It Works</h2>
-          <ol style={{ paddingLeft: "1.5rem", color: "#333" }}>
-            <li>Request a quote by providing your vehicle and destination details.</li>
-            <li>Schedule a pickup at a convenient time and location.</li>
-            <li>Track your vehicle in real-time during transit.</li>
-            <li>Receive your vehicle safely at the destination.</li>
+        {/* How we work */}
+        <section className="boxcar-container py-10">
+          <h2 className="mb-4">How We Work</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Pick a car online (or book a video call).</li>
+            <li>We send photos, a detailed condition report, and an HD walkaround.</li>
+            <li>Reserve securely for £99 and choose collection or home delivery.</li>
+            <li>We deliver on the agreed date. Inspect on arrival — you have a 14-day remote-purchase right.</li>
           </ol>
         </section>
 
-        <section className="returns-mileage" style={{ backgroundColor: "#eef2f7", padding: "3rem 1rem", maxWidth: "900px", margin: "0 auto" }}>
-          <h2>Returns & Mileage</h2>
-          <p style={{ color: "#444", lineHeight: "1.6" }}>
-            We understand concerns about mileage and returns. Motorea guarantees that your vehicle’s mileage will be within agreed limits and offers clear return policies should you need to cancel or modify your delivery. Customer satisfaction is our commitment.
-          </p>
+        {/* Proof / Testimonials */}
+        <section className="boxcar-container py-10">
+          <h2 className="mb-4">What Buyers Say</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="p-6 border rounded-lg">
+              <p className="mb-2">“Exactly as described — zero hassle. Delivery in 4 days.”</p>
+              <div className="text-sm text-gray-600">— Sarah K</div>
+            </div>
+            <div className="p-6 border rounded-lg">
+              <p className="mb-2">“Video + report gave me confidence. Would buy again.”</p>
+              <div className="text-sm text-gray-600">— John D</div>
+            </div>
+            <div className="p-6 border rounded-lg">
+              <p className="mb-2">“Great communication and no hidden fees. Recommend.”</p>
+              <div className="text-sm text-gray-600">— Ahmed R</div>
+            </div>
+          </div>
         </section>
 
-        <section className="faq" style={{ padding: "3rem 1rem", maxWidth: "900px", margin: "0 auto" }}>
-          <h2>Frequently Asked Questions</h2>
-          <dl style={{ color: "#333" }}>
-            <dt><strong>Q: How long does delivery take?</strong></dt>
-            <dd>A: Delivery times depend on distance but typically range from 3 to 10 days.</dd>
-
-            <dt><strong>Q: Is my vehicle insured during transit?</strong></dt>
-            <dd>A: Yes, we provide comprehensive insurance coverage for all deliveries.</dd>
-
-            <dt><strong>Q: Can I track my vehicle?</strong></dt>
-            <dd>A: Absolutely! Real-time tracking is available with every delivery.</dd>
-
-            <dt><strong>Q: What if I need to reschedule?</strong></dt>
-            <dd>A: Contact our support team to modify your delivery schedule with no hassle.</dd>
-          </dl>
-        </section>
-
-        <section className="footer-cta" style={{ backgroundColor: "#0070f3", color: "#fff", textAlign: "center", padding: "3rem 1rem" }}>
-          <h2>Ready to Ship Your Vehicle?</h2>
-          <p style={{ maxWidth: "600px", margin: "0 auto 1.5rem", fontSize: "1.1rem" }}>
-            Request a quote today and experience hassle-free long-distance car delivery with Motorea.
-          </p>
-          <a href="/contact" style={{ backgroundColor: "#fff", color: "#0070f3", padding: "0.75rem 1.5rem", borderRadius: "4px", textDecoration: "none", fontWeight: "bold" }}>
-            Get a Quote
-          </a>
+        {/* CTA */}
+        <section className="boxcar-container py-14">
+          <div className="flex flex-col md:flex-row md:items-center gap-4 p-6 border rounded-lg">
+            <p className="text-lg font-medium mb-0">Ready to find your next car?</p>
+            <div className="flex flex-wrap gap-3">
+              <ReserveButton amount={99} description="Deposit – About Page" />
+              <a
+                className="theme-btn"
+                href="https://wa.me/447722471841"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp Us 07722 471841
+              </a>
+              <Link className="theme-btn" href="/cars-for-sale">
+                Browse Stock
+              </Link>
+            </div>
+          </div>
         </section>
       </main>
-      <Footer1 parentClass="boxcar-footer footer-style-one v1 cus-st-1" />
+      <Footer1 />
     </>
   );
 }

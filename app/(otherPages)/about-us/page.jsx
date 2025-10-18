@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header1 from "@/components/common/headers/Header1";
 import Footer from "@/components/common/footers/Footer";
 import ReserveButton from "@/components/common/ReserveButton";
+import GoogleReviews from "@/components/common/GoogleReviews";
 
 export const metadata = {
   title: "About Motorea — Quality Used Cars, Delivered UK-wide",
@@ -49,23 +50,10 @@ export default function AboutUsPage() {
           </ol>
         </section>
 
-        {/* Testimonials */}
+        {/* Google Reviews */}
         <section className="boxcar-container py-10">
           <h2 className="mb-4">What Buyers Say</h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="p-6 border rounded-lg">
-              <p className="mb-2">“Exactly as described — zero hassle. Delivery in 4 days.”</p>
-              <div className="text-sm text-gray-600">— Sarah K</div>
-            </div>
-            <div className="p-6 border rounded-lg">
-              <p className="mb-2">“Video + report gave me confidence. Would buy again.”</p>
-              <div className="text-sm text-gray-600">— John D</div>
-            </div>
-            <div className="p-6 border rounded-lg">
-              <p className="mb-2">“Great communication and no hidden fees. Recommend.”</p>
-              <div className="text-sm text-gray-600">— Ahmed R</div>
-            </div>
-          </div>
+          <GoogleReviews />
         </section>
 
         {/* CTA */}

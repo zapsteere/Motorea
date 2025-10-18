@@ -15,6 +15,9 @@ export default function AboutUsPage() {
     <>
       <Header1 headerClass="boxcar-header header-style-v1 style-two inner-header cus-style-1" />
       <main className="layout-radius">
+        {/* sanity flag – remove after deploy */}
+        <p style={{ display: "none" }}>about-flag-42</p>
+
         {/* Hero */}
         <section className="boxcar-container pt-16 pb-10">
           <h1 className="mb-3">About Motorea</h1>

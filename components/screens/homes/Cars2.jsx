@@ -142,7 +142,7 @@ export default function Cars2() {
                 >
                   <div className="slider-thumb">
                     {car.images.slice(0, 1).map((image, i) => (
-                      <div className="image">
+                      <div key={i} className="image">
                         <Image
                           src={String(image)}
                           alt={car.title}

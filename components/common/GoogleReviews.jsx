@@ -24,9 +24,9 @@ export default function GoogleReviews({
     try {
       setLoading(true);
       
-      // Using Google Places API to fetch reviews
+      // Using our server-side API route to avoid CORS issues
       const response = await fetch(
-        `${googleConfig.placesApiUrl}?place_id=${placeId}&fields=reviews&key=${googleConfig.apiKey}`
+        `/api/google-reviews?place_id=${placeId}`
       );
       
       if (!response.ok) {

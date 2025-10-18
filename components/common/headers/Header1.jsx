@@ -36,7 +36,7 @@ export default function Header1({
                 <Link href={`/`}>
                   {white ? (
                     <Image
-                      alt=""
+                      alt="Motorea - Quality Used Cars"
                       title="Motorea"
                       src="/images/logo2.svg"
                       width="108"
@@ -44,7 +44,7 @@ export default function Header1({
                     />
                   ) : (
                     <Image
-                      alt=""
+                      alt="Motorea - Quality Used Cars"
                       title="Motorea"
                       src="/images/logo.svg"
                       width={108}
@@ -54,7 +54,7 @@ export default function Header1({
                 </Link>
               </div>
 
-              {/* <div className="layout-search">
+              <div className="layout-search">
                 <div className="search-box">
                   <svg
                     className="icon"
@@ -139,7 +139,7 @@ export default function Header1({
                     </svg>
                   </Link>
                 </div>
-              </div> */}
+              </div>
             </div>
             {/*Nav Box*/}
             <div className="nav-out-bar">

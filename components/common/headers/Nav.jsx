@@ -49,12 +49,20 @@ export default function Nav() {
 
   return (
     <>
-      <li className="current">
+      <li>
         <Link className={pathname == "/" ? "menuActive" : ""} href={`/`}>
           Home
         </Link>
       </li>
-      <li className="current">
+      <li>
+        <Link
+          className={pathname == "/cars-for-sale" ? "menuActive" : ""}
+          href={`/cars-for-sale`}
+        >
+          Cars for Sale
+        </Link>
+      </li>
+      <li>
         <Link
           className={pathname == "/about-us" ? "menuActive" : ""}
           href={`/about-us`}
@@ -62,7 +70,7 @@ export default function Nav() {
           About us
         </Link>
       </li>
-      <li className="current">
+      <li>
         <Link
           className={pathname == "/delivery" ? "menuActive" : ""}
           href={`/delivery`}
@@ -70,7 +78,7 @@ export default function Nav() {
           Delivery
         </Link>
       </li>
-      <li className="current">
+      <li>
         <Link className={pathname == "/faq" ? "menuActive" : ""} href={`/faq`}>
           FAQ
         </Link>

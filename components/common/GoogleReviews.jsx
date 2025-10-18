@@ -35,8 +35,13 @@ export default function GoogleReviews({
       
       const data = await response.json();
       
-      if (data.status === 'OK' && data.result.reviews) {
+      if (data.fallback) {
+        // API key not configured, use fallback reviews
+        setReviews(googleConfig.fallbackReviews);
+        setError(null);
+      } else if (data.status === 'OK' && data.result.reviews) {
         setReviews(data.result.reviews.slice(0, maxReviews));
+        setError(null);
       } else {
         throw new Error('No reviews found or API error');
       }

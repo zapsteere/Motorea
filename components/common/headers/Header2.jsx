@@ -39,8 +39,8 @@ export default function Header2() {
               <div className="logo">
                 <Link href={`/`}>
                   <Image
-                    alt=""
-                    title="Boxcar"
+                    alt="Motorea - Quality Used Cars"
+                    title="Motorea"
                     src="/images/logo.svg"
                     width={108}
                     height={26}
